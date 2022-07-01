@@ -12,6 +12,7 @@ export const postSlice = createSlice({
 
   initialState: initialState,
   extraReducers: {
+    //under the hood, the type of getPosts action is post/getPosts/[fulfilled or rejected or pending](look at services.js)
     [getPosts.fulfilled]: (state, action) => {
       state.loading = false;
       state.posts = action.payload.results;

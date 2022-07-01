@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
   name: "general",
+  // Everytime that one of these actions are dispatched(from App.js), the generated type will be: name/actionName, e.g. general/hasStarted
+
   initialState: {
     isActive: false,
     isPaused: false,
