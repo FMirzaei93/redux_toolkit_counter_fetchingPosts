@@ -8,9 +8,9 @@ const BASE_URL = "https://opentdb.com/api.php?amount=5";
 export const getPosts = createAsyncThunk(
   "posts/getPosts",
   // It's a name that generated action type constants will use this as a prefix(under the hood).
-  // Everytime that this action is dispatched(from App.js), the generated action type will be this name, which is: posts/getPosts
-  //After that, depending on the result(fullfilled, rejected, pending), this action will dispatch another action, so the action type will
-  //be : name/[fulfilled or rejected or pending] which is : posts/getPosts/fulfilled (look at the generated tyoes on Redux google extension)
+  // Everytime that this action is dispatched(from App.js), depending on the result of the async function(fullfilled, rejected, pending),
+  //this action will dispatch another action, so the action type will be : name/[fulfilled or rejected or pending]
+  //which here is : posts/getPosts/fulfilled (look at the generated tyoes on Redux google extension)
   //now the reducer in postSlice decides what to do with the state based on the generated action type here.
 
   async () => {
